@@ -130,24 +130,24 @@
         <h4 class="modal-title" id="exampleModalLabel">New travel</h4>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="POST" action="<?=site_url('travel/add')?>">
           <div class="form-group">
             <label for="city" class="control-label">City:</label>
-            <input type="text" class="form-control" id="city" name="cityText">
+            <textarea class="form-control" id="city" name="cityText"></textarea>
           </div>
           <div class="form-group">
             <label for="price" class="control-label">Price:</label>
-            <input type="text" class="form-control" id="price" name="priceText">
+            <textarea class="form-control" id="price" name="priceText"></textarea>
           </div>
           <div class="form-group">
             <label for="period" class="control-label">Period:</label>
-            <input type="text" class="form-control" id="period" name="periodText">
+            <textarea class="form-control" id="period" name="periodText"></textarea>
           </div>
           <div class="form-group">
             <label for="photo" class="control-label">Photo link:</label>
-            <input type="text" class="form-control" id="photo" name="photoText">
+            <textarea class="form-control" id="photo" name="photoText"></textarea>
           </div>
-          <button type="button" id="btn-send" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
       <div class="modal-footer">
@@ -164,7 +164,6 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo site_url('assets/js/bootstrap.min.js'); ?>"></script>
 
-    <script src="<?php echo site_url('assets/js/travel_list_script.js'); ?>"></script>
 </body>
 
 </html>

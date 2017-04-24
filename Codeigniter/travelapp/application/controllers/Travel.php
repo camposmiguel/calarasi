@@ -30,7 +30,7 @@ class Travel extends CI_Controller {
 		$data_array = array(
 			'title'=>'Travel list',
 			'company'=>'TrianaTravels',
-			'travels'=>$travelList
+			'travels' => $travelList
 		);
 
 		$this->load->view('travel_list',$data_array);
@@ -39,5 +39,15 @@ class Travel extends CI_Controller {
 	public function all()
 	{
 		echo "You're in Travel > List";
+	}
+
+	public function add() {
+		// 1. Load the model file
+		$this->load->model('travel_model');
+
+		// 2. Call to insert method
+		$this->travel_model->insert_travel();
+
+		echo "Travel added successfully";
 	}
 }

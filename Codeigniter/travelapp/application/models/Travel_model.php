@@ -14,6 +14,17 @@ class Travel_model extends CI_Model {
                 return $query->result();
         }
 
+        public function insert_travel(){
+          $data = array(
+                  'city' => $this->input->post('cityText'),
+                  'price' => $this->input->post('priceText'),
+                  'period' => $this->input->post('periodText'),
+                  'photo' => $this->input->post('photoText')
+          );
+
+          $this->db->insert('travel', $data);
+        }
+
 
 
 }
